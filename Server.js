@@ -4,11 +4,30 @@ var bodyParser  = require("body-parser");
 var md5 = require('MD5');
 var rest = require("./Handler.js");
 var app  = express();
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var path = require('path');
+var createError = require('http-errors');
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
 function REST(){
     var self = this;
     self.connectMysql();
 };
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
 
 REST.prototype.connectMysql = function() {
     var self = this;
