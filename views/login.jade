@@ -2,3 +2,15 @@ extends layout
 
 block content
   h1 Login
+  form(method="POST", target="./")
+    label name
+    br
+    input(type="text", name="word" value="")
+    input(type="hidden", name="mode" value="input")
+    br
+    label email address
+    br
+    input(type="text", name="word" value="")
+    input(type="hidden", name="mode" value="input")
+    br
+    input(type="submit", value="送信")
