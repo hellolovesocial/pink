@@ -133,3 +133,27 @@ form {
     top:3px;
     box-shadow:none;
   }
+
+  .post-class {
+   background-color: ghostwhite;
+   padding: 3%;
+   position: relative;
+   width: 500px;
+   height: 150px;
+   /* border: 3px black; */
+  }
+  .name-class {
+    position:absolute;
+    top:10px;
+    left:10px;
+  }
+  .content-class {
+    position:absolute;
+    top:50px;
+    left:10px;
+  }
+  .time-class {
+    position:absolute;
+    right: 10px;
+    bottom: 10px;
+  }
