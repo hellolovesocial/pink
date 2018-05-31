@@ -15,6 +15,13 @@ h1 {
   text-align: center;
 }
 
+div {
+  width: 500px;
+  margin-right: auto;
+  margin-left : auto;
+  margin-top: 30px;
+}
+
 p {
   text-align: center;
   font-size: 17px;
