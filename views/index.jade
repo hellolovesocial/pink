@@ -1,5 +1,17 @@
-extends layout
+head
+  link(rel='stylesheet', href='/stylesheets/style.css')
 
 block content
-  h1 Top
-  
+  img(src='/images/logo.JPG' alt="logo")(style="margin-left:-10%; width: 120%;")
+  nav(style="margin-left:-10%;width:120%;")
+    ul
+      li
+        a(href="/") Top
+      li
+        a(href="/about") About
+      li
+        a(href="/login") Login
+      li
+        a(href="/home") Home
+
+  h1 Welcome to Flower
